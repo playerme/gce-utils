@@ -5,7 +5,7 @@ from libcloud.compute.providers import get_driver
 
 class MetaDataServer():
     def __init__(self):
-        self.project_id = self.get_info('project/project_id')
+        self.project_id = self.get_info('project/project-id')
 
     def get_info(self, path):
         headers = {'Metadata-Flavor': 'Google'}
@@ -24,6 +24,4 @@ class GCE():
                 '',
                 project=self.get_project()
                 )
-
-    def get_project(self):
-        pass
+        self.project = self.metadata.project_id
