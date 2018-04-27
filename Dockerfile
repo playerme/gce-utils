@@ -6,4 +6,4 @@ WORKDIR /gceutils
 ADD Pipfile .
 ADD Pipfile.lock .
 RUN pipenv install --system
-ADD gceutils .
+ADD gceutils gceutils
