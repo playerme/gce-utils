@@ -15,6 +15,7 @@ jobs:
           command: |
             pip install pipenv
             pipenv install --dev
+            pipenv run python setup.py install
       - run:
           name: run tests
           command: |
