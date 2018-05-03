@@ -16,9 +16,8 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            pip install --upgrade pip
             pip install pipenv
-            pipenv install --system --dev
+            pipenv install --dev
       - save_cache:
           paths:
             - ./venv
