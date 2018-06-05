@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+from gce import DNSUpdater, MetaDataServer
+import click
+
+
+@click.command()
+@click.argument('project')
+@click.argument('domain')
+def update_dns(project, domain):
+    metadata = MetaDataServer
+    dns = DNSUpdater(project, domain)
+    dns.update_record(metadata.name, metadata.primary_ip)
+
+
+if __name__ == '__main__':
+    update_dns()

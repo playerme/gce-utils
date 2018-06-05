@@ -4,8 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-apache-libcloud = "*"
 requests = "*"
+pycrypto = "*"
+apache-libcloud = "*"
+google-cloud-dns = "*"
+click = "*"
 
 [dev-packages]
 neovim = "*"

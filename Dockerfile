@@ -1,5 +1,6 @@
 FROM python:3-alpine
 
+RUN apk add --no-cache gcc g++ make openlibm-dev openssl-dev
 RUN pip install --upgrade pip
 RUN pip install pipenv
 WORKDIR /usr/local/src

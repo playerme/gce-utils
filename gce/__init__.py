@@ -1,1 +1,1 @@
-from .core import MetaDataServer, GCE
+from .core import MetaDataServer, GCE, DNSUpdater
