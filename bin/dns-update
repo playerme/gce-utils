@@ -7,7 +7,7 @@ import click
 @click.argument('project')
 @click.argument('domain')
 def update_dns(project, domain):
-    metadata = MetaDataServer
+    metadata = MetaDataServer()
     dns = DNSUpdater(project, domain)
     fqdn = '{}.{}'.format(metadata.name, dns.zone.dns_name)
     dns.update_record(fqdn, metadata.primary_ip)
