@@ -9,7 +9,8 @@ import click
 def update_dns(project, domain):
     metadata = MetaDataServer
     dns = DNSUpdater(project, domain)
-    dns.update_record(metadata.name, metadata.primary_ip)
+    fqdn = '{}.{}'.format(metadata.name, dns.zone.dns_name)
+    dns.update_record(fqdn, metadata.primary_ip)
 
 
 if __name__ == '__main__':

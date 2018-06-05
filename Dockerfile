@@ -10,5 +10,3 @@ RUN pipenv install --system
 ADD . .
 RUN python setup.py install
 WORKDIR /
-RUN rm -rf /usr/local/src
-
